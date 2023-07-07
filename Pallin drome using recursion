@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+bool pallindrome(string s,int i,int j)
+{
+	if(i>j)
+	return true;
+	return s[i]==s[j] && pallindrome(s,i+1,j-1);
+	
+}
+int main()
+{
+	int n;
+	cin>>n;
+	while(n--)
+	{
+		string s;
+		cout<<"Enter the string"<<endl;
+		cin>>s;
+		if (pallindrome(s,0,s.length()-1))
+		cout<<"palliondrome"<<endl;
+		else
+		cout<<"NOT a Pallindrome"<<endl;
+	}
+}
